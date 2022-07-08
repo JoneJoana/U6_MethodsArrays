@@ -11,9 +11,11 @@ public class U6_EJ3App {
 		
 		int num;
 		
-		System.out.println("Introduce un numero");
+		System.out.println("Introduce un numero para saber si es primo");
 		num = sc.nextInt();
 		sc.nextLine();
+		
+		sc.close();
 		
 		if(esPrimo(num)) {
 			System.out.println("El numero "+num+" es primo");

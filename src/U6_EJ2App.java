@@ -27,6 +27,7 @@ public class U6_EJ2App {
 		max = sc.nextInt();
 		sc.nextLine();
 	
+		sc.close();
 		for(int i=0;i<cantidadNums;i++) { //imprimimos valores generados segun cantidad indicada
 			System.out.println(generaNumAleatorio(min,max)); 
 		}

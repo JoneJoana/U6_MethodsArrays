@@ -49,6 +49,7 @@ public class U6_EJ1App {
 			System.out.println("Introduce opcion correcta");
 		}
 
+		sc.close();
 		mostrarAreaCalc(area);
 
 	}
