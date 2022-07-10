@@ -30,10 +30,10 @@ public class U6_EJ11App {
 			arrayNum1[i] = (int)(Math.random()*(100-1));
 		}
 		
-		int arrayNum2[] = arrayNum1; //creacion 2o array apuntando al 1o
+		int arrayNum2[] = arrayNum1; //creacion 2o array apuntando al 1o (por tanto son el mismo,ocupan mismo espacio en la memoria)
 		
-		for(int i=0;i<arrayNum2.length;i++) { //lo rellenamos con nuevos valores random
-			arrayNum2[i] = (int)(Math.random()*(100-1));
+		for(int i=0;i<arrayNum2.length;i++) { //lo rellenamos con nuevos valores random,por tanto estamos tambien sobreescribiendo el array1
+			arrayNum2[i] = (int)(Math.random()*(100-1)); //math.random devuelve nums entre 0 y 0.9 asi que le damos rango
 		}
 		
 		int arrayNum3[] = createArray(arrayNum1,arrayNum2,size);
