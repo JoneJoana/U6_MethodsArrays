@@ -23,6 +23,7 @@ public class U6_EJ11App {
 		System.out.println("Indica tamaño de los arrays a generar");
 		size = sc.nextInt();
 		sc.nextLine();
+		sc.close();
 		
 		int arrayNum1[] = new int[size]; //creacion primer array
 		
