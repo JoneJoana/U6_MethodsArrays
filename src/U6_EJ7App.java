@@ -27,6 +27,8 @@ public class U6_EJ7App {
 		moneda = sc.nextLine();			
 
 		conversorMoneda(cantEuros,moneda);
+		
+		sc.close();
 	}
 	
 	private static void conversorMoneda(int euros,String moneda) {

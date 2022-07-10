@@ -24,6 +24,8 @@ public class U6_EJ5App {
 		
 		System.out.println(conversBin(num));
 		
+		sc.close();
+		
 	}
 	
 	private static String conversBin(int num){

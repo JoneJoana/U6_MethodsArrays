@@ -25,6 +25,8 @@ public class U6_EJ6App {
 			System.out.println("No es un valor valido");
 		}
 		
+		sc.close();
+		
 	}
 	
 	private static int numCifras(int num){
