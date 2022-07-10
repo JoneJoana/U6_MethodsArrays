@@ -9,7 +9,7 @@ public class U6_EJ8App {
 		 * 2 metodos uno para rellenar valores y otro para mostrar. 
 		 */
 		
-		int nums[] = rellenaNums();
+		int nums[] = rellenaNums(); //inicializamos array  con los datos que nos devolvera el propio metodo
 		muestraNums(nums);	
 		
 	}
