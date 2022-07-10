@@ -17,6 +17,7 @@ public class U6_EJ10App {
 		int size;
 		int min,max;
 		
+		//pedimos valores para crear array
 		System.out.println("Indica tamaño del array de numeros primos a generar");
 		size = sc.nextInt();
 		sc.nextLine();
@@ -30,12 +31,28 @@ public class U6_EJ10App {
 		
 		sc.close();
 		
+		fillArrayRandom(arrayNum,min,max);
+		showArray(arrayNum);
+		
+	}
+	
+	private static void showArray(int[] arrayNum) {
+		int maxNum = 0;
+		
+		for(int i=0;i<arrayNum.length;i++) {
+			System.out.println("arrayNum["+i+"] = "+arrayNum[i]);
+			if(arrayNum[i]>maxNum) { //actualizaremos valor de maxNum con el numero mayor del array
+				maxNum = arrayNum[i];
+			}
+		}
+		
+		System.out.println("El valor mayor de todos es: "+maxNum);
 	}
 	
 	private static int[] fillArrayRandom(int[] arrayNum,int min, int max) {		
 		
 		for(int i=0;i<arrayNum.length;i++) {
-			arrayNum[i] = randomEsPrimo(min,max);
+			arrayNum[i] = randomEsPrimo(min,max); //relleno array con valores primos verificados
 		}	
 		
 		return arrayNum;
@@ -46,7 +63,7 @@ public class U6_EJ10App {
 		int random;
 		do {
 			random = (int)(Math.random()*(max - min));
-		}while(!esPrimo(random));
+		}while(!esPrimo(random)); //en el momento que sea random sale del bucle y return valor
 		
 		return random;
 		
@@ -54,17 +71,17 @@ public class U6_EJ10App {
 	
 	private static boolean esPrimo(int num) {
 		
-		if(num==1 || num == 0) {  // 0 y 1 sabemos que no son numeros primos 
+		if(num==1 || num == 0) {  
 			return false;
 		}
 		
 		for(int i=2;i<num;i++) { 
-			if(num%i==0) { 
+			if(num%i==0) {  //si el resto de la division con algun valor es igual a 0,implica que es divisible por tanto no es primo (false)
 				return false;
 			}
 		}
 		
-		return true; //si no ha sido divisble entre ninguno, es primo.
+		return true; 
 	}
 
 }
